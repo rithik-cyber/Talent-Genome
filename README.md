@@ -1,40 +1,52 @@
-# 🔬 Talent Genome: ML-Powered Career Pathway Recommender
+# 1)  AI-Powered Job Recommendation System
 
-An AI-driven internal mobility system that uses NLP and machine learning to recommend personalized career paths for employees based on their skill profiles, learning histories, and performance data.
+  This is an AI-driven job recommendation system that analyzes resumes and suggests the most relevant job positions based on skills and experience. The system utilizes **Natural Language Processing (NLP)** and **Semantic Search** to find the best job matches.
 
-## 🚀 Project Overview
+  ## 🚀 Features
+  - Upload a **PDF resume** for job recommendations
+  - **AI-based analysis** using `SentenceTransformer` for job matching
+  - **Fast and efficient search** powered by `FAISS`
+  - **TF-IDF filtering** to narrow down relevant jobs
+  - **Streamlit-powered Web Interface** for easy use
 
-The **Talent Genome** project aims to support HR and L&D teams in enabling employee growth while minimizing external hiring. By analyzing internal employee records and using Sentence-BERT embeddings combined with clustering and classification, the system predicts role-fit and upskilling pathways with measurable accuracy.
+  ## 🛠️ Technologies Used
+  - `Python`
+  - `Streamlit` (for the UI)
+  - `FAISS` (for efficient job matching)
+  - `Sentence Transformers` (for embedding resumes and job descriptions)
+  - `PyMuPDF` (to extract text from PDF resumes)
+  - `scikit-learn` (for TF-IDF filtering)
 
----
+  ## 📌 How to Run
+  1. Clone this repository:
+    ```sh
+    git clone https://github.com/YomnaWaleed/job-recommendation-system-ai.git
+    cd job-recommendation-system-ai
 
-## 🎯 Objectives
+# 2) Install the dependencies:
+  pip install -r requirements.txt
 
-- Identify skill-role matches for internal employees
-- Recommend personalized career paths and upskilling routes
-- Reduce external hiring by supporting strategic internal mobility
+# 3) Run the Streamlit app:
+  streamlit run streamlit.py
 
----
+# 4) Open the URL shown in the terminal 
+  (e.g., http://localhost:8501)
 
-## 🧠 Key Features
 
-- 🔍 **Skill Profiling:** Extracts and encodes employee skills, roles, and performance metrics
-- 🧾 **Sentence-BERT Embeddings:** Transforms employee profiles and job descriptions into semantic vectors
-- 📊 **ML Classification Models:** Predict best-fit roles using clustering + Random Forest classifiers
-- ⚙️ **Skill Gap Analysis:** Detects missing competencies for transition and recommends training
-- 📈 **Impact:** Boosted internal mobility predictions by 41%, reduced external hiring reliance by 18%
 
----
 
-## 🛠️ Tech Stack
+# 📄 Dataset
+  The system uses a CSV file (JobsFE.csv) containing job descriptions, skills, and work details. Ensure this file is present in the project folder.
 
-- **Languages & Tools:** Python, Jupyter, Git
-- **NLP Models:** Sentence-BERT (via HuggingFace)
-- **ML Frameworks:** Scikit-learn, XGBoost
-- **Data Processing:** Pandas, NumPy
-- **Visualization (Optional):** Power BI or Streamlit for skill gap insights
 
----
+# 🤖 How It Works
+  Resume Processing: Extracts text from the uploaded PDF resume.
+  TF-IDF Filtering: Reduces the number of job descriptions for faster and better recommendations.
+  Semantic Search: Uses SentenceTransformer embeddings with FAISS for similarity search.
+  Top Job Matches: The best job recommendations are displayed on the Streamlit app.
 
-## 📁 Folder Structure
 
+# 📌 Future Improvements
+  ✅ Support for multiple resume formats (DOCX, TXT)
+  ✅ Advanced customized filtering based on user preferences
+  ✅ Integration with LinkedIn job postings
